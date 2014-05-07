@@ -28,7 +28,7 @@ generate_messages(
 
 catkin_package()
 
-add_definitions(-msse3)
+add_definitions(-Wall -march=native -O3)
 
 include_directories(src ${libviso2_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 

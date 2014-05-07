@@ -101,12 +101,11 @@ protected:
 
     // Resolve topic names
     ros::NodeHandle nh;
-    std::string stereo_ns = nh.resolveName("stereo");
-    std::string left_topic = ros::names::clean(stereo_ns + "/left/" + nh.resolveName("image"));
-    std::string right_topic = ros::names::clean(stereo_ns + "/right/" + nh.resolveName("image"));
+    std::string left_topic = "/left/image_rect" ;
+    std::string right_topic = "/right/image_rect" ;
 
-    std::string left_info_topic = stereo_ns + "/left/camera_info";
-    std::string right_info_topic = stereo_ns + "/right/camera_info";
+    std::string left_info_topic = "/cam0/camera_info";
+    std::string right_info_topic = "/cam1/camera_info";
 
     // Subscribe to four input topics.
     ROS_INFO("Subscribing to:\n\t* %s\n\t* %s\n\t* %s\n\t* %s", 
