@@ -4,7 +4,7 @@ project(libviso2)
 find_package(catkin REQUIRED )
 
 #set(CMAKE_CXX_FLAGS "-msse3")
-add_definitions(-msse3)
+add_definitions(-Wall -march=native -O3)
 
 add_library(viso2
   libviso2/src/filter.cpp
