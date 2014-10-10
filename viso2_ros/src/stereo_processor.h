@@ -104,8 +104,8 @@ protected:
     std::string left_topic = "/left/image_rect" ;
     std::string right_topic = "/right/image_rect" ;
 
-    std::string left_info_topic = "/cam0/camera_info";
-    std::string right_info_topic = "/cam1/camera_info";
+    std::string left_info_topic = "/cam1/camera_info";
+    std::string right_info_topic = "/cam0/camera_info";
 
     // Subscribe to four input topics.
     ROS_INFO("Subscribing to:\n\t* %s\n\t* %s\n\t* %s\n\t* %s", 
